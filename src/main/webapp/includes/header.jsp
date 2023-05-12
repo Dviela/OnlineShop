@@ -82,9 +82,11 @@
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Contact</h4>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
+            <li><a href="index.jsp" class="text-white">Home</a></li>
+            <li><a href="insert-customer.jsp" class="text-white">Insert Customer</a></li>
+            <li><a href="insert-product.jsp" class="text-white">Insert Product</a></li>
+            <li><a href="delete-product.jsp" class="text-white">Delete Product</a></li>
+            <li><a href="delete-customer.jsp" class="text-white">Delete Customer</a></li>
           </ul>
         </div>
       </div>
