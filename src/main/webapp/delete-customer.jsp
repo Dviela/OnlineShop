@@ -11,6 +11,4 @@
   <div/>
 </form>
 
-
-
 <%@include file="includes/footer.jsp"%>

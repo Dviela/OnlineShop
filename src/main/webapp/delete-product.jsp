@@ -10,4 +10,5 @@
       <input class="btn btn-primary" type="submit" value="Delete">
    <div/>
 </form>
+
 <%@include file="includes/footer.jsp"%>

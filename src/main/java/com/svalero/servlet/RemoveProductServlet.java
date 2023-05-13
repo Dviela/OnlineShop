@@ -29,8 +29,8 @@ public class RemoveProductServlet extends HttpServlet {
                 dao.removeProduct(id);
                 return null;
             });
-            out.println("Product removed");
-            //response.sendRedirect("index.jsp");
+            //out.println("Product removed");
+            response.sendRedirect("delete-product.jsp");
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
         }

@@ -1,6 +1,7 @@
 package com.svalero.servlet;
 
 import com.svalero.dao.CustomerDAO;
+
 import com.svalero.dao.Database;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -15,7 +16,7 @@ import java.io.PrintWriter;
 public class RemoveCustomerServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
@@ -29,9 +30,8 @@ public class RemoveCustomerServlet extends HttpServlet {
                 dao.removeCustomer(id);
                 return null;
             });
-
-//          response.sendRedirect("index.jsp");
-            out.println("Customer removed");
+            //out.println("Customer removed");
+            response.sendRedirect("delete-customer.jsp");
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
         }
