@@ -88,6 +88,8 @@
             <li><a href="insert-product.jsp" class="text-white">Insert Product</a></li>
             <li><a href="delete-product.jsp" class="text-white">Delete Product</a></li>
             <li><a href="delete-customer.jsp" class="text-white">Delete Customer</a></li>
+            <li><a href="list-product.jsp" class="text-white">List Products</a></li>
+            <li><a href="list-customer.jsp" class="text-white">List Customers</a></li>
           </ul>
         </div>
       </div>

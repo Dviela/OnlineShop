@@ -11,10 +11,10 @@ public class CustomerMapper implements RowMapper<Customer> {
     @Override
     public Customer map(ResultSet rs, StatementContext ctx) throws SQLException {
         return new Customer(
-                rs.getInt("id"),
-                rs.getString("name"),
-                rs.getString("password"),
-                rs.getString("email")
+                rs.getInt("ID_CLIENTE"),
+                rs.getString("NOMBRE"),
+                rs.getString("ADDRESS"),
+                rs.getString("EMAIL")
         );
     }
 

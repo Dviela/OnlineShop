@@ -3,6 +3,7 @@ package com.svalero.servlet;
 import com.svalero.dao.CustomerDAO;
 import com.svalero.dao.Database;
 import com.svalero.dao.ProductDAO;
+import com.svalero.domain.Customer;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -36,6 +37,7 @@ public class AddCustomerServlet extends HttpServlet {
         } catch (ClassNotFoundException cnef){
             cnef.printStackTrace();
         }
+
 
     }
 }
