@@ -6,24 +6,24 @@ import org.jdbi.v3.sqlobject.statement.UseRowMapper;
 
 import java.util.List;
 public interface ProductDAO {
-    @SqlQuery("SELECT * FROM OnlineShop")
+    @SqlQuery("SELECT * FROM PRODUCTOS")
     @UseRowMapper(ProductMapper.class)
     List<Product> getProduct();
 
-    @SqlQuery("SELECT * FROM OnlineShop WHERE id = ?")
+    @SqlQuery("SELECT * FROM PRODUCTOS WHERE id = ?")
     @UseRowMapper(ProductMapper.class)
     Product getProduct(int id);
 
-    @SqlUpdate("INSERT INTO OnlineShop (name, description, price, image) VALUES (?, ?, ?, ?)")
+    @SqlUpdate("INSERT INTO PRODUCTOS (NOMBRE, DESCRIPCION, PRECIO, IMAGEN) VALUES (?, ?, ?, ?)")
     void addProduct(String name, String description, int price, String image);
 
-    @SqlUpdate("DELETE FROM OnlineShop WHERE id = ?")
+    @SqlUpdate("DELETE FROM PRODUCTOS WHERE ID_PRODUCTO = ?")
     void removeProduct(int id);
 
-    @SqlUpdate("UPDATE OnlineShop SET name = ?, description = ?, price = ?, image = ? WHERE id = ?")
+    @SqlUpdate("UPDATE PRODUCTOS SET NOMBRE = ?, DESCRIPCION = ?, PRECIO = ?, IMAGEN = ? WHERE ID_PRODUCTO = ?")
     void editProduct(String name, String description, int price, String image, int id);
 
-    @SqlUpdate("UPDATE OnlineShop SET name = ?, description = ?, price = ? WHERE id = ?")
+    @SqlUpdate("UPDATE PRODUCTOS SET NOMBRE = ?, DESCRIPCION = ?, PRECIO = ? WHERE ID_PRODUCTO = ?")
     void editProduct(String name, String description, int price, int id);
 }
 

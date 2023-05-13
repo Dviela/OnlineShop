@@ -7,34 +7,32 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/add-product")
-public class AddProductServlet extends HttpServlet {
+@WebServlet("/remove-product")
+public class RemoveProductServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-
-        String name = request.getParameter("name");
-        String description = request.getParameter("description");
-        int price = Integer.parseInt(request.getParameter("price"));
-        String imagePath = request.getServletContext().getInitParameter("image");
+        int id = Integer.parseInt(request.getParameter("id"));
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Database.connect();
+
             Database.jdbi.withExtension(ProductDAO.class, dao -> {
-                dao.addProduct(name, description, price, imagePath);
+                dao.removeProduct(id);
                 return null;
             });
-            out.println("Product successfully inserted");
-        } catch (ClassNotFoundException cnef){
-            cnef.printStackTrace();
+            out.println("Product removed");
+            //response.sendRedirect("index.jsp");
+        } catch (ClassNotFoundException cnfe) {
+            cnfe.printStackTrace();
         }
-
     }
 }

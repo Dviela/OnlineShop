@@ -4,7 +4,7 @@
 <div class="container">
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Name Product</label>
-    <textarea class="form-control" id="nameProduct"  name="name" rows="1"></textarea>
+    <textarea class="form-control" id="name"  name="name" rows="1"></textarea>
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Description Product</label>

@@ -13,7 +13,7 @@ public class Customer {
     @NonNull
     private String name;
     @NonNull
-    private String password;
+    private String address;
     @NonNull
     private String email;
 }
