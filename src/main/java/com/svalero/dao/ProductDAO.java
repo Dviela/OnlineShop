@@ -10,7 +10,7 @@ public interface ProductDAO {
     @UseRowMapper(ProductMapper.class)
     List<Product> getProduct();
 
-    @SqlQuery("SELECT * FROM PRODUCTOS WHERE id = ?")
+    @SqlQuery("SELECT * FROM PRODUCTOS WHERE ID_PRODUCTO = ?")
     @UseRowMapper(ProductMapper.class)
     Product getProduct(int id);
 

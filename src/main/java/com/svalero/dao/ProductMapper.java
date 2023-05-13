@@ -10,11 +10,11 @@ import java.sql.SQLException;
 public class ProductMapper implements RowMapper<Product> {
     @Override
     public Product map(ResultSet rs, StatementContext ctx) throws SQLException {
-        return new Product(rs.getInt("id"),
-                rs.getString("name"),
-                rs.getString("description"),
-                rs.getInt("price"),
-                rs.getString("image")
+        return new Product(rs.getInt("ID_PRODUCTO"),
+                rs.getString("NOMBRE"),
+                rs.getString("DESCRIPCION"),
+                rs.getInt("PRECIO"),
+                rs.getString("IMAGEN")
         );
     }
 

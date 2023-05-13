@@ -14,6 +14,6 @@ public class Product {
     private String description;
     @NonNull
     private int price;
-    @NonNull
+
     private String image;
 }
