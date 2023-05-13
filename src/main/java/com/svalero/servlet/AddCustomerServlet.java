@@ -31,7 +31,8 @@ public class AddCustomerServlet extends HttpServlet {
                 dao.addCustomer(name, address, email);
                 return null;
             });
-            out.println("Customer successfully registered");
+            //out.println("Customer successfully registered");
+            response.sendRedirect("insert-customer.jsp");
         } catch (ClassNotFoundException cnef){
             cnef.printStackTrace();
         }

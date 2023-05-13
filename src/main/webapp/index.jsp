@@ -27,6 +27,12 @@ Manage your online store comfortably and easily</p>
         <p>
         <a href="delete-customer.jsp" class="btn btn-secondary my-2">Delete Customer</a>
         </p>
+        <p>
+        <a href="list-customer.jsp" class="btn btn-primary my-2">Customer List</a>
+        </p>
+        <p>
+        <a href="list-product.jsp" class="btn btn-secondary my-2">Product List</a>
+        </p>
       </div>
 
     </div>
