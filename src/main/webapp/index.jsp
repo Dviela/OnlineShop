@@ -1,3 +1,9 @@
+<%@ page import="com.svalero.dao.Database" %>
+<%@ page import="com.svalero.dao.ProductDAO" %>
+<%@ page import="com.svalero.domain.Product" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.time.format.DateTimeFormatter" %>
+
 <%@include file="includes/header.jsp"%>
 
 
@@ -13,10 +19,10 @@ Manage your online store comfortably and easily</p>
           <a href="insert-product.jsp" class="btn btn-primary my-2">Insert Product</a>
         </p>
         <p>
-          <a href="delete-product.jsp" class="btn btn-primary my-2">Delete Product</a>
+          <a href="delete-product.jsp" class="btn btn-secondary my-2">Delete Product</a>
         </p>
         <p>
-        <a href="insert-customer.jsp" class="btn btn-secondary my-2">Insert Customer</a>
+        <a href="insert-customer.jsp" class="btn btn-primary my-2">Insert Customer</a>
         </p>
         <p>
         <a href="delete-customer.jsp" class="btn btn-secondary my-2">Delete Customer</a>
@@ -25,6 +31,10 @@ Manage your online store comfortably and easily</p>
 
     </div>
   </section>
+<%
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Database.connect();
+%>
 
 
 </main>
